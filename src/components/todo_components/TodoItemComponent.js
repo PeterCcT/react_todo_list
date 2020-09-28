@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { baseUrl } from "../server/url_base";
-import '../css/todo_components/todo_item_component.css';
+import { baseUrl } from "../../server/url_base";
+import '../../css/todo_components/todo_item_component.css';
 
 export default function TodoItem(props) {
     const [isTodoCompleted, setCompleted] = useState(props.isCompleted);

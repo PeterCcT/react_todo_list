@@ -1,6 +1,6 @@
 import React from 'react';
 import TodoItem from './TodoItemComponent';
-import '../css/todo_components/todo_itens_box_component.css'
+import '../../css/todo_components/todo_itens_box_component.css'
 
 export default function TodoItensBox(props) {
     return (

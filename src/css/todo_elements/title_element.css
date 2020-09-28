@@ -1,0 +1,8 @@
+.title {
+    color: white;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    margin-top: 3rem;
+    justify-content: center;
+}

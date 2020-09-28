@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import {baseUrl} from '../server/url_base'
-import '../css/todo_components/add_todo_component.css'
+import {baseUrl} from '../../server/url_base'
+import '../../css/todo_components/add_todo_component.css'
 
 export default function AddTodo(props) {
 
