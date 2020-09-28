@@ -1,11 +1,12 @@
 import React from 'react';
 import axios from 'axios';
+import {baseUrl} from '../server/url_base'
 import '../css/todo_components/add_todo_component.css'
 
 export default function AddTodo(props) {
 
     function makeRequestToSaveTodo(todoToAdd) {
-        axios.post('http://localhost:8080/addTodo', todoToAdd)
+        axios.post(`${baseUrl}/addTodo`, todoToAdd)
             .then(res => {
                 const todoList = res.data;
                 props.addTodo(todoList);

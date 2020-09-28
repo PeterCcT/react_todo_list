@@ -1,12 +1,13 @@
-import React, { memo, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
+import { baseUrl } from "../server/url_base";
 import '../css/todo_components/todo_item_component.css';
 
-function TodoItem(props) {
+export default function TodoItem(props) {
     const [isTodoCompleted, setCompleted] = useState(props.isCompleted);
 
     function completeTodo(id) {
-        axios.put('http://localhost:8080/completeTodo', { id: id })
+        axios.put(`${baseUrl}/completeTodo`, { id: id })
             .then(res => {
                 setCompleted(!isTodoCompleted)
                 props.addTodo(res.data);
@@ -18,7 +19,7 @@ function TodoItem(props) {
     }
 
     function deleteTodo(id) {
-        axios.delete('http://localhost:8080/deleteTodo', { id: id })
+        axios.delete(`${baseUrl}/deleteTodo`, { id: id })
             .then(res => {
                 props.addTodo(res.data);
                 alert('Tarefa excluida com sucesso :)');
@@ -35,5 +36,3 @@ function TodoItem(props) {
         </div>
     );
 }
-
-export default memo(TodoItem);

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import {baseUrl} from '../server/url_base';
 import AddComponent from '../todo_components/AddTodoComponent';
 import TodoItensBox from '../todo_components/TodoItensBoxComponent';
 import '../css/todo_box.css'
 export default function TodoWidget() {
     const [todoList, addTodo] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:8080/getTodoList')
+        axios.get(`${baseUrl}/getTodoList`)
             .then(res => {
                 addTodo(res.data);
             })
