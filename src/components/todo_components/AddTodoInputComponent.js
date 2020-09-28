@@ -3,7 +3,8 @@ import axios from 'axios';
 import {baseUrl} from '../../server/url_base'
 import '../../css/todo_components/add_todo_component.css'
 
-export default function AddTodo(props) {
+//Create an custom input that save a new Todo item
+export default function AddTodoInput(props) {
 
     function makeRequestToSaveTodo(todoToAdd) {
         axios.post(`${baseUrl}/addTodo`, todoToAdd)
@@ -18,7 +19,7 @@ export default function AddTodo(props) {
     }
 
     function saveTodo(event) {
-        if (event.key === 'Enter') {
+        if (event.key === 'Enter' && event.target.value) {
             const todoToAdd = {
                 id: props.todoList.length,
                 title: event.target.value,

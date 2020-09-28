@@ -17,21 +17,30 @@
     background: #f6f6f6;
 }
 
-.todo-item h4 {
-    width: fit-content;
+.todo-item input {
+    width: 11rem;
     height: fit-content;
-    max-width: 15rem;
+    padding: 1rem;
     margin: 1.3rem;
     color: black;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     font-size: 24px;
+    border: none;
+    background: none;
+    outline: none;
 }
 
-.todo-item h5{
-  width: fit-content;
-  height: fit-content;
-  cursor: pointer;
-  margin: 1rem;
-} 
+.todo-item button {
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgb(247, 23, 23);
+    color: white;
+    outline: none;
+    margin: 1rem;
+}
