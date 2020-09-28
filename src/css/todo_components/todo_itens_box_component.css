@@ -1,0 +1,9 @@
+.todo-itens-box {
+    width: 93%;
+    margin: auto;
+    height: 30rem;
+    background: #ffbb91;
+    scroll-behavior: auto;
+    border-radius: 0.4rem;
+    overflow: scroll;
+}

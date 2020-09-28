@@ -1,0 +1,27 @@
+.todo-item {
+    width: 95%;
+    height: 4.5rem;
+    margin: 1rem auto;
+    overflow: hidden;
+    border-radius: 0.7rem;
+}
+
+.completed {
+    background: greenyellow;
+}
+
+.uncompleted {
+    background: #f6f6f6;
+}
+
+.todo-item h4 {
+    width: fit-content;
+    height: fit-content;
+    max-width: 15rem;
+    margin: 1.3rem;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 24px;
+}
