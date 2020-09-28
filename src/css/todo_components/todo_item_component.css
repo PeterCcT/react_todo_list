@@ -4,6 +4,9 @@
     margin: 1rem auto;
     overflow: hidden;
     border-radius: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .completed {
@@ -25,3 +28,10 @@
     text-overflow: ellipsis;
     font-size: 24px;
 }
+
+.todo-item h5{
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  margin: 1rem;
+} 

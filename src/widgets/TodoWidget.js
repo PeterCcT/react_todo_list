@@ -19,7 +19,7 @@ export default function TodoWidget() {
     return (
         <div className="todo-container">
             <AddComponent addTodo={(item) => addTodo(item)} todoList={todoList} />
-            <TodoItensBox todoList={todoList} />
+            <TodoItensBox todoList={todoList} addTodo = {(item) => addTodo(item)} />
         </div>
     );
 }

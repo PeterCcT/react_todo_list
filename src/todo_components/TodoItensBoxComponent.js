@@ -5,7 +5,7 @@ import '../css/todo_components/todo_itens_box_component.css'
 export default function TodoItensBox(props) {
     return (
         <div className="todo-itens-box">
-            {props.todoList.map(item => <TodoItem {...item} />)}
+            {props.todoList.map(item => <TodoItem {...item} addTodo = {props.addTodo} />)}
         </div>
     );
 }
